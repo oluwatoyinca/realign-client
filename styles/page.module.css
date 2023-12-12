@@ -1,3 +1,13 @@
+.main {
+  position: relative;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  text-align: center;
+  height: 100vh;
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -9,4 +19,33 @@
 
 .home>a:hover {
   color: #5aead0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+  font-size: 5rem;
+  font-weight: 200;
+  scroll-snap-align: start;
+}
+
+.section.first {
+  justify-content: center;
+  padding: 2rem;
+  color: #5aead0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 3rem;
+    font-size: 2.5rem;
+  }
 }
