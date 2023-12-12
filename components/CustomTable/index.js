@@ -1,8 +1,10 @@
 
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import styles from './styles.module.css'
+import UpdateModal from '../UpdateModal'
 
 const CustomTable = ({viewValues = [], editableValues = [], compareValues = []}) => {
+    // const [showEditModal, setShowEditModal] = useState(false)
     let useSmallFont = false
     const structuredValues = useMemo(() => {
         if (viewValues.length > 0) {
@@ -36,6 +38,7 @@ const CustomTable = ({viewValues = [], editableValues = [], compareValues = []})
         ))}
         </tbody>
       </table> : <></>}
+      {/* <UpdateModal fieldsToUpdate={editableValues} modalLabel={'hi'} onUpdate={()=> alert('hi')} showModal={false} setShowModal={setShowEditModal}/> */}
     </>
   )
 }
