@@ -43,6 +43,108 @@
   font-weight: 500;
 }
 
+.jumbo {
+  font-size: 6rem;
+  text-align: center;
+  color: #fff;
+  animation-duration: 1s;
+  animation-name: jumbo;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  text-shadow: 0 0 10px #fff, 0 0 20px #3f887f, 0 0 30px #176136, 0 0 40px #176136, 0 0 50px #176136;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  padding: 5px 0;
+}
+
+@keyframes jumbo {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #3f887f, 0 0 30px #176136, 0 0 40px #176136, 0 0 50px #176136;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #176136, 0 0 30px #3f887f, 0 0 40px #3f887f, 0 0 50px #3f887f;
+  }
+}
+
+.arr {
+  position: absolute;
+  top: calc(100vh - 119px); 
+  padding: 50px 0;
+  width: 100%;
+}
+.arr > h1 {
+  position: relative;
+  top: 0px;
+  animation-duration: 1s;
+  animation-name: arr;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+:nth-child(2 of .arr) {
+  top: calc(200vh - 119px); 
+  text-shadow: 0 0 10px #3f887f, 0 0 20px #3f887f, 0 0 30px #176136;
+}
+
+:nth-child(3 of .arr) {
+  top: calc(300vh - 119px); 
+  text-shadow: 0 0 10px #fff, 0 0 20px #3f887f, 0 0 30px #3f887f, 0 0 40px #176136, 0 0 50px #176136;
+}
+
+@keyframes arr {
+  from {
+    top: 0px; 
+  }
+  to {
+    top: 20px; 
+  }
+}
+
+.tiny {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.glow {
+  height: 25px;
+  width: 100vw;
+  filter: blur(45px);
+  z-index: auto;
+  position: fixed;
+}
+
+.topglow {
+  background-image: linear-gradient(#176136, #3f887f, transparent);
+}
+
+.btglow {
+  background-image: linear-gradient(transparent, #3f887f, #176136);
+  top: calc(100vh - 25px)
+}
+
+.maxbold {
+  color: #5aead0;
+  font-weight: 900;
+}
+
+.divider {
+  color: white;
+  font-weight: 200;
+  font-size: 3rem;
+  border-bottom: 1px solid #fff; 
+  line-height: 0;
+  width: 70vw;
+}
+
+.divider>span {
+  background-color: black;
+  padding: 0 20px;
+}
+
 @media (max-width: 700px) {
   .section {
     padding: 3rem;
